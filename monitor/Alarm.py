@@ -19,10 +19,10 @@ print VALIDATION
 print ELECTION
 print HOSTNAME
 if int(VALIDATION) == 1:
-  bot.sendMessage(chat_id='-1001416401295', "Server "+text=str(HOSTNAME)+" Validating);
+  bot.sendMessage(chat_id='-1001416401295', "Server "+text=str(HOSTNAME)+" Validating");
 if int(ELECTION) == 1:
-  bot.sendMessage(chat_id='-1001416401295', "Server "+text=str(HOSTNAME)+" in Election);
+  bot.sendMessage(chat_id='-1001416401295', "Server "+text=str(HOSTNAME)+" in Election");
 if int(SYNC) < int(SYNCalarm):
-  bot.sendMessage(chat_id='-1001416401295', "server "text=str(HOSTNAME)+" SYNC off, SYNC:"+str(SYNC));
+  bot.sendMessage(chat_id='-1001416401295', "server "+text=str(HOSTNAME)+" SYNC off, SYNC:"+str(SYNC));
 if int(SYNC) > int(SYNCalarm1):
-  bot.sendMessage(chat_id='-1001416401295', "server "text=str(HOSTNAME)+" SYNC off, SYNC:"+str(SYNC));
+  bot.sendMessage(chat_id='-1001416401295', "server "+text=str(HOSTNAME)+" SYNC off, SYNC:"+str(SYNC));
