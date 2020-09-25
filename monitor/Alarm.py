@@ -10,5 +10,5 @@ VALIDATION=subprocess.check_output("cat ~/node.operator/logs/election.log | grep
 ELECTION=subprocess.check_output("cat ~/node.operator/logs/election.log | grep -oP '(?<=ELECTION_STATUS: )[0-9]'",shell=True);
 
 print VALIDATION
-if VALIDATION == "1":
+if int(VALIDATION) == 1:
   print "validating"
