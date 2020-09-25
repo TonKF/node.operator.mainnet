@@ -17,4 +17,4 @@ print USERNAME
 if int(VALIDATION) == 1:
   print str(USERNAME)+"validating"
 if int(ELECTION) == 1:
-  print str(username)+"in Election"
+  print str(USERNAME)+"in Election"
