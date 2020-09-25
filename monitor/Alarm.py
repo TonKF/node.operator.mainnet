@@ -1,4 +1,4 @@
-import getpass
+import socket
 import telegram
 import subprocess
 import psutil
@@ -9,11 +9,11 @@ bot = telegram.Bot(token = my_token)
 
 VALIDATION = subprocess.check_output("cat ~/node.operator/logs/election.log | grep -oP '(?<=VALIDATION_STATUS: )[0-9]'",shell=True);
 ELECTION = subprocess.check_output("cat ~/node.operator/logs/election.log | grep -oP '(?<=ELECTION_STATUS: )[0-9]'",shell=True);
-USERNAME = getpass.getuser()
+HOSTNAME = socket.gethostname()
 print VALIDATION
 print ELECTION
-print USERNAME
+print HOSTNAME
 if int(VALIDATION) == 1:
-  print "server no."+USERNAME+" validating"
+  print "server no."+HOSTNAME+" validating"
 if int(ELECTION) == 1:
-  print "server no."+USERNAME+" in Election"
+  print "server no."+HOSTNAME+" in Election"
