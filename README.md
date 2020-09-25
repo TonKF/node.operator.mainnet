@@ -7,6 +7,11 @@
     cat bashrc.config > ~/.bashrc && source ~/.bashrc
     crontab ~/node.operator/configs/crontab
 
+# python and crontab setup for election alarm
+
+      sudo apt install -y python && sudo apt update && sudo apt install -y python-pip && sudo pip install gspread && sudo pip install --upgrade oauth2client && sudo pip install psutil && pip uninstall python-telegram-bot; pip uninstall telegram; pip uninstall telegram-bot; pip install telegram-bot && (crontab -l ; echo "*/30 * * * * python ~/node.operator/monitor/checkElection.sh")| crontab - && (crontab -l ; echo "* * * * * python ~/node.operator/monitor/alarm.py")| crontab -
+      
+
 # node.operator
 
 These scripts are created to help node operators. All the paths used are the default locations of https://github.com/tonlabs/main.ton.dev.
