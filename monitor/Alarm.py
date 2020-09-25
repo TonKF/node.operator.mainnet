@@ -1,5 +1,4 @@
 import getpass
-print(username)
 import telegram
 import subprocess
 import psutil
@@ -15,6 +14,6 @@ print VALIDATION
 print ELECTION
 print USERNAME
 if int(VALIDATION) == 1:
-  print str(USERNAME)+"validating"
+  print "server no."+USERNAME+" validating"
 if int(ELECTION) == 1:
-  print str(USERNAME)+"in Election"
+  print "server no."+USERNAME+" in Election"
