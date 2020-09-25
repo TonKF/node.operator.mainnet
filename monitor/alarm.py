@@ -18,10 +18,10 @@ SYNCalarm1 = 0
 print VALIDATION
 print ELECTION
 print HOSTNAME
-if int(VALIDATION) == 1:
-  bot.sendMessage(chat_id='-1001416401295', text=str(HOSTNAME)+" Validating");
-if int(ELECTION) == 1:
-  bot.sendMessage(chat_id='-1001416401295', text=str(HOSTNAME)+" in Election");
+if int(VALIDATION) == 0:
+  bot.sendMessage(chat_id='-1001416401295', text=str(HOSTNAME)+" Not Validating");
+if int(ELECTION) == 0:
+  bot.sendMessage(chat_id='-1001416401295', text=str(HOSTNAME)+" Not in Election");
 if int(SYNC) < int(SYNCalarm):
   bot.sendMessage(chat_id='-1001416401295', text=str(HOSTNAME)+" SYNC off, SYNC:"+str(SYNC));
 if int(SYNC) > int(SYNCalarm1):
