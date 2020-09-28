@@ -16,6 +16,6 @@ mv ~/net.ton.dev ~/main.ton.dev
 cd ${SCRIPTS_DIR}
 . ./env.sh
 ./build.sh
-export NETWORK_TYPE=main
+export NETWORK_TYPE=net.ton.dev
 ./setup.sh
 ./run.sh
