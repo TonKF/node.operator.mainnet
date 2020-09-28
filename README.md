@@ -1,4 +1,4 @@
-# node.operator.mainnet
+# node.operator.mainnet(updating)
 
     mv node.operator.mainnet node.operator
     cd node.operator/scripts && . ~/node.operator/configs/env.sh main
