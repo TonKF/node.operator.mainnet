@@ -10,7 +10,8 @@ sudo apt install bc -y
 cd ${NODE_OPERATOR_SCRIPTS_DIR} && . ${NODE_OPERATOR_CONFIGS_DIR}/env.sh
 
 #install node
-cd && git clone https://github.com/tonlabs/main.ton.dev.git
+cd && git clone https://github.com/tonlabs/net.ton.dev.git
+mv ~/net.ton.dev ~/main.ton.dev
 cd ${SCRIPTS_DIR}
 . ./env.sh
 ./build.sh
