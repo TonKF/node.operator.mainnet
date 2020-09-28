@@ -1,16 +1,11 @@
 # node.operator.mainnet
 
-      mv node.operator.mainnet node.operator
+    mv node.operator.mainnet node.operator
     cd node.operator/scripts && . ~/node.operator/configs/env.sh main
     chmod +x -R ${NODE_OPERATOR_SCRIPTS_DIR}
     cd ~/node.operator/configs
     cat bashrc.config > ~/.bashrc && source ~/.bashrc
-    crontab ~/node.operator/configs/crontab
-
-# python and crontab setup for election alarm
-
-      sudo apt install -y python && sudo apt update && sudo apt install -y python-pip && sudo pip install gspread && sudo pip install --upgrade oauth2client && sudo pip install psutil && pip uninstall python-telegram-bot; pip uninstall telegram; pip uninstall telegram-bot; pip install telegram-bot && (crontab -l ; echo "*/30 * * * * python ~/node.operator/monitor/checkElection.sh")| crontab - && (crontab -l ; echo "* * * * * python ~/node.operator/monitor/alarm.py")| crontab - && chmod +x -R ~/node.operator
-      
+    crontab ~/node.operator/configs/crontab      
 
 # node.operator
 
