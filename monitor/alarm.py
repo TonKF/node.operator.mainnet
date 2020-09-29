@@ -10,7 +10,7 @@ bot = telegram.Bot(token = my_token)
 HOSTNAME = socket.gethostname()
 VALIDATION = subprocess.check_output("cat ~/node.operator/logs/election.log | grep -oP '(?<=VALIDATION_STATUS: )[0-9]'",shell=True);
 ELECTION = subprocess.check_output("cat ~/node.operator/logs/election.log | grep -oP '(?<=ELECTION_STATUS: )[0-9]'",shell=True);
-SYNC=subprocess.check_output("~/net.ton.dev/scripts/check_node_sync_status.sh | grep TIME_DIFF | awk '{print $4}' | tr '[:upper:]' '[:lower:]'",shell=True);
+SYNC=subprocess.check_output("~/main.ton.dev/scripts/check_node_sync_status.sh | grep TIME_DIFF | awk '{print $4}' | tr '[:upper:]' '[:lower:]'",shell=True);
 
 
 SYNCalarm = "-100"
