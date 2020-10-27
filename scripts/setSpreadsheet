@@ -38,6 +38,6 @@ LOG=subprocess.check_output("tail -n 1 ~/node.operator/logs/master.log | tr -d '
 ELECTION=subprocess.check_output("tail -n 1 ~/node.operator/logs/election.log | tr -d ';'  | tr -d ':'",shell=True)
 sleep (randint(1,10))
 
-CELL=
+CELL='A'+HOSTNAME
 
-worksheet.update_acell('A'+HOSTNAME, 'TIME'+TIME+' SYNC'+SYNC+' CPU'+str(CPU)+' RAM'+str(RAM.percent)+' NETSENT'+str((NETSENT)/131072)+ ' NETREC'+str((NETREC)/131072)+ ' DISKREAD'+str((DISKR)/131072)+' DISKWRITE'+str((DISKW)/131072)+ str(LOG) + str(ELECTION))
+worksheet.update_acell(CELL,'TIME'+TIME+' SYNC'+SYNC+' CPU'+str(CPU)+' RAM'+str(RAM.percent)+' NETSENT'+str((NETSENT)/131072)+ ' NETREC'+str((NETREC)/131072)+ ' DISKREAD'+str((DISKR)/131072)+' DISKWRITE'+str((DISKW)/131072)+ str(LOG) + str(ELECTION))
