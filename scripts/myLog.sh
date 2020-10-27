@@ -62,7 +62,7 @@ PRINT_FAILED_AUTOMATED_VALIDITY_CHECKS=$(printf 'FAILED_AUTOMATED_VALIDITY_CHECK
 #2A - COUNTS
 ##time
 CHECK_UNIXTIME=$(date +%s)
-CHECK_TIME_DIFF=$(~/net.ton.dev/scripts/check_node_sync_status.sh | awk 'FNR == 14 {print $4}')
+CHECK_TIME_DIFF=$(~/*.ton.dev/scripts/check_node_sync_status.sh | awk 'FNR == 14 {print $4}')
 
 ##slow
 COUNT_SLOW_TOTAL=$(tail -n $TAIL_NUMBER /var/ton-work/node.log | grep 'SLOW' | wc -l)
