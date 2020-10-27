@@ -32,12 +32,14 @@ NETSENT=(tot_after.bytes_sent-tot_before.bytes_sent)
 NETREC=(tot_after.bytes_recv-tot_before.bytes_recv)
 CPU=psutil.cpu_percent(interval=None, percpu=False)
 TIME=datetime.now().strftime('%d %H:%M')
-SYNC=subprocess.check_output("~/net.ton.dev/scripts//check_node_sync_status.sh | grep TIME_DIFF | awk '{print $4}' | tr '[:upper:]' '[:lower:]'",shell=True)
+SYNC=subprocess.check_output("~/*.ton.dev/scripts//check_node_sync_status.sh | grep TIME_DIFF | awk '{print $4}' | tr '[:upper:]' '[:lower:]'",shell=True)
 RAM=psutil.virtual_memory()
 LOG=subprocess.check_output("tail -n 1 ~/node.operator/logs/master.log | tr -d ';'  | tr -d ':'",shell=True)
 ELECTION=subprocess.check_output("tail -n 1 ~/node.operator/logs/election.log | tr -d ';'  | tr -d ':'",shell=True)
 sleep (randint(1,10))
 
-CELL='A'+HOSTNAME
+ADD = "1"
+CELLNO = int(ADD)+ int(HOSTNAME)
+CELL = 'B'+str(CELLNO)
 
 worksheet.update_acell(CELL,'TIME'+TIME+' SYNC'+SYNC+' CPU'+str(CPU)+' RAM'+str(RAM.percent)+' NETSENT'+str((NETSENT)/131072)+ ' NETREC'+str((NETREC)/131072)+ ' DISKREAD'+str((DISKR)/131072)+' DISKWRITE'+str((DISKW)/131072)+ str(LOG) + str(ELECTION))
