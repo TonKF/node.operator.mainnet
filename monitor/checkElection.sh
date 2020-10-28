@@ -13,7 +13,7 @@ if ~/node.operator/scripts/myElection.sh | grep -q 'SUBMISSION CONFIRMED';
         then
    election=$(echo " ELECTION_STATUS: 1;")
         else
-             if ~/node.operator/scripts/myElection.sh | grep -q 'ELECTED VALIDATOR'
+             if ~/node.operator/scripts/myElection.sh | grep -q 'ELECTED VALIDATOR';
                   then
                       election=$(echo " ELECTION_STATUS: 1;")
                         else
